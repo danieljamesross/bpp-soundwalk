@@ -1,0 +1,374 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    background-color:#FFDE17;
+    background-attachment:fixed;
+/*    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
+    font-family: felt-tip-woman, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    
+    width:100%;
+    position:relative;
+    z-index:-2;
+}
+
+/* Portrait layout (default) */
+.app {
+  /*  background:url(../img/mapbg.jpg) no-repeat center top; /* 170px x 200px */
+    background-size: cover;
+    position:absolute;             /* position in the center of the screen */
+   /* left:50%;*/
+/*    top:30%; */
+    /*  height:200px;                  text area height */
+    width:100%;                   /* text area width */
+    text-align:center;
+    padding:0px      /* image height is 200px (bottom 20px are overlapped with text) */
+  /*  margin:-125px 0px 0px -160px;   offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+     /*   padding:75px 0px 75px 170px;   padding-top + padding-bottom + text area = image height */
+       /*   margin:-90px 0px 0px -198px; offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+h3 {
+    text-transform:uppercase;
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+h4 {
+    text-transform:uppercase;
+    font-size:20px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    margin-top:50%;
+    display:block;
+}
+
+.event.received {
+    margin-top:50%;
+    display:none;
+}
+
+img.spinner {
+    margin-top:50%;
+    animation: spin 2s infinite;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+    
+@keyframes spin {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg) }
+    to { -webkit-transform: rotate(360deg) }
+}
+
+
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+
+div.pbar {
+    display: none;
+    border-radius: 12px;
+    background-color: #6FCCDD !important; /*#006838*/ 
+    /*border: 3px solid #6FCCDD !important;*/
+    padding: 1em;
+    font-size: .8em;
+    position: relative;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    
+}
+
+
+ 
+div.help,div.credits {
+    /*border: 3px solid #6FCCDD !important;*/
+    /*  background-color: #6FCCDD /*#006838*/ !important;*/
+    padding: .3em 1em;
+    font-size: .8em;
+}
+
+div.intro {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    background-color: #FFDE17;
+    position: relative;
+    animation: none;
+    -webkit-animation: none;
+}
+div.credits,div.help,div.svgmapcss,div.intro{
+    display:none;
+}
+@keyframes from-right {
+    0% {right: -100%; opacity:1;}
+    100% {right: 0%; opacity:1;}
+}
+
+@-webkit-keyframes from-right {
+    0% {right: -100%; opacity:1;}
+    100% {right: 0%; opacity:1;}
+}
+
+@keyframes to-right {
+    0% {right: 0%; opacity:1;}
+    100% {right: -100%; opacity:1;}
+}
+
+@-webkit-keyframes to-right {
+    0% {right: 0%; opacity:1;}
+    100% {right: -100%; opacity:1;}
+}
+
+@keyframes from-left {
+    0% {left: -100%; opacity:1;}
+    100% {left: 0%; opacity:1;}
+}
+
+@-webkit-keyframes from-left {
+    0% {left: -100%; opacity:1;}
+    100% {left: 0%; opacity:1;}
+}
+
+@keyframes to-left {
+    0% {left: 0%; opacity:1;}
+    100% {left: -100%; opacity:1;}
+}
+
+@-webkit-keyframes to-left {
+    0% {left: 0%; opacity:1;}
+    100% {left: -100%; opacity:1;}
+}
+
+@keyframes fade-in {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fade-in {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes fade-out {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@-webkit-keyframes fade-out {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes twist-exit {
+    0%   {left:0%; top:0%; width:100%; height: 100%; opacity: 1; transform: rotateZ(0deg);}
+    50% {left:40%; top:-70%; width:40%; height: 40%;}
+    100% {left:100%; top:-100%; width:0.1%; height: 0.1%; opacity: 0; transform: rotateZ(360deg);}
+}
+
+@-webkit-keyframes twist-exit {
+    0%   {left:0%; top:0%; width:100%; height: 100%; opacity: 1; -webkit-transform: rotateZ(0deg);}
+    50% {left:40%; top:-70%; width:40%; height: 40%;}
+    100% {left:100%; top:-100%; width:0.1%; height: 0.1%; opacity: 0; -webkit-transform: rotateZ(360deg);}
+}
+
+@keyframes from-top {
+    0% {top: -100%;}
+    100% {top: 0%;}
+}
+
+@-webkit-keyframes from-top {
+    0% {top: -100%;}
+    100% {top: 0%;}
+}
+
+@keyframes to-top {
+    0% {top: 0%;}
+    100% {top: -100%;}
+}
+
+@-webkit-keyframes to-top {
+    0% {top: 0%;}
+    100% {top: -100%;}
+}
+
+div.help {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  /*  background-color: #6CC176 !important;*/
+    display:none;
+    position: relative;
+    -webkit-animation: from-left 0.6s ease-in;
+    animation: from-left 0.6s ease-in;
+}
+
+div.credits {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+/*    background-color: #FFDE17 !important;/*#6CC176*/
+    display:none;
+    position: relative;
+    -webkit-animation: from-right 0.6s ease-in;
+    animation: from-right 0.6s ease-in;
+}
+
+div.svgmapcss {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    width: 100%;
+   /* background: #98B3AD !important;*/
+    position: relative;
+    
+    animation: fade-in 0.1s ease;
+    -webkit-animation: fade-in 0.1s ease;
+}
+
+div.directions {
+    margin-top:15%;
+    width:100%;
+    position:absolute;
+    z-index:990;
+    border-radius:12px;
+    
+}
+
+
+div.in {
+    border-radius:12px;
+display:none;
+width:70%;
+padding:1.5em;
+margin: 0 auto;
+text-align: center;
+background-color: #6CC176;
+color: black;
+z-index:999;
+position: relative;
+/* animation: disappear 0s ease-in 2s forwards;
+-webkit-animation: disappear 0s ease-in 2s forwards;
+-moz-animation: disappear 0s ease-in 2s forwards; */
+transform: translate3d(0,0,0);
+-webkit-transform: translate3d(0,0,0);
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
+}
+
+p {text-align: left;
+   font-size: 13pt;}
+
+.button {
+background-color: #149647; /* Green */
+border: none;
+border-radius:12px;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform:uppercase;
+    color:#FFDE17;
+}
+
+.button:active,.button:hover {
+background-color: #127736; /* Green */
+}
+
+@keyframes disappear {
+to {
+      width:0;
+height:0;
+display:none;
+        overflow:hidden;}
+
+}
+
+@-webkit-keyframes disappear {
+to {
+      width:0;
+height:0;
+display:none;
+visibility:hidden;}
+}

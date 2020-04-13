@@ -1,0 +1,55 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-allow-background-audio": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "org.bpp.sound.walk"
+    }
+  }
+}

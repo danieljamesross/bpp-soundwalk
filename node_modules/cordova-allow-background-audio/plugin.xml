@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="cordova-allow-background-audio"
+	version="1.0.2">
+
+	<name>allow-background-audio</name>
+
+	<description>
+		Allow Background Audio for iOS
+
+		When included within a cordova/phonegap build then the application will not stop any background audio that is playing. Any application sounds will play over the background audio.
+		No further action is necessary.
+	</description>
+
+	<keywords>background-audio,background,audio,media,ios</keywords>
+
+	<license>MIT</license>
+
+	<author>David S. Figatner</author>
+
+	<repo>https://github.com/davidfig/cordova-allow-background-audio.git</repo>
+	<issue>https://github.com/davidfig/cordova-allow-background-audio/issues</issue>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	 <!-- ios -->
+	 <platform name="ios">
+
+		 <config-file target="config.xml" parent="/*">
+			 <feature name="AllowBackgroundAudio">
+				 <param name="ios-package" value="AllowBackgroundAudio" onload="true" />
+				 <param name="onload" value="true" />
+			 </feature>
+		 </config-file>
+
+		 <source-file src="src/ios/AllowBackgroundAudio.m" />
+
+	 </platform>
+
+</plugin>

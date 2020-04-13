@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-allow-background-audio",
+        "scope": null,
+        "escapedName": "cordova-allow-background-audio",
+        "name": "cordova-allow-background-audio",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/danieljross/Documents/Beckenham-place/BP-SW-app/BPP Soundwalk/node_modules"
+    ]
+  ],
+  "_from": "cordova-allow-background-audio@latest",
+  "_id": "cordova-allow-background-audio@1.0.2",
+  "_inCache": true,
+  "_location": "/cordova-allow-background-audio",
+  "_nodeVersion": "6.6.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-allow-background-audio-1.0.2.tgz_1503383562336_0.05904923821799457"
+  },
+  "_npmUser": {
+    "name": "davidfig",
+    "email": "david@yopeyopey.com"
+  },
+  "_npmVersion": "5.3.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-allow-background-audio",
+    "scope": null,
+    "escapedName": "cordova-allow-background-audio",
+    "name": "cordova-allow-background-audio",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-allow-background-audio/-/cordova-allow-background-audio-1.0.2.tgz",
+  "_shasum": "53f5cca018079dfea8606031b2fe86d77b2dcddf",
+  "_shrinkwrap": null,
+  "_spec": "cordova-allow-background-audio",
+  "_where": "/Users/danieljross/Documents/Beckenham-place/BP-SW-app/BPP Soundwalk/node_modules",
+  "bugs": {
+    "url": "https://github.com/davidfig/cordova-allow-background-audio/issues"
+  },
+  "cordova": {
+    "id": "cordova-allow-background-audio",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "\n\t\tAllow background Audio for iOS\n\n\t\tWhen included within a cordova/phonegap build then the application will allow background audio to continue to play for iOS\n\t\tout of the box. No further action is necessary.\n\n\t\tThis negates having to use location/other ",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-5QzEY/rMJkGBmLlitpZEJ+yEW35LjR8rKuh4/5npyYirqGmOqJXK412Hx6Ewz4+wL32ja8ZqBl9xbMD7kwg9nA==",
+    "shasum": "53f5cca018079dfea8606031b2fe86d77b2dcddf",
+    "tarball": "https://registry.npmjs.org/cordova-allow-background-audio/-/cordova-allow-background-audio-1.0.2.tgz"
+  },
+  "gitHead": "860d07bcb11d8e24332353167307e95c34d24ff5",
+  "homepage": "https://github.com/davidfig/cordova-allow-background-audio#readme",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "phonegap",
+    "background-audio",
+    "background",
+    "audio",
+    "media",
+    "ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "davidfig",
+      "email": "david@yopeyopey.com"
+    }
+  ],
+  "name": "cordova-allow-background-audio",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidfig/cordova-allow-background-audio.git"
+  },
+  "version": "1.0.2"
+}
