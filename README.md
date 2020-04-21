@@ -4,7 +4,7 @@ This is the PhoneGap Template for building the Beckenham Place Park Soundwalk
 App. Current builds are for Android and IOS but, in theory, it is possible to
 build for other platforms.
 
-Details of the project can be found at the [BPP App Website](http://www.bppsoundwalk.org/privacy.html).
+Details of the project can be found at the [BPP App Website](http://www.bppsoundwalk.org/).
 
 ![Screenshot of the app](http://www.bppsoundwalk.org/img/app-phone.png)
 
